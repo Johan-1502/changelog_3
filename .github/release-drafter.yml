@@ -14,12 +14,17 @@ categories:
       - "refactor"
 
 change-template: "- $TITLE (#$NUMBER) por @$AUTHOR"
+
 version-template: "$MAJOR.$MINOR.$PATCH"
+
 template: |
-  # Cambios en esta versión ($NEXT_PATCH_VERSION)
+  # 📢 Release $NEXT_PATCH_VERSION
 
   ## 🚀 Nuevas Funcionalidades
   $CHANGES
 
-  **Commits incluidos en esta versión:**
+  ## 🔥 Commits incluidos en esta versión:
+  $COMMITS
+
+  ## 👥 Contribuidores:
   $CONTRIBUTORS

@@ -16,11 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install GitHub CLI
-        run: |
-          sudo apt update
-          sudo apt install gh -y
-
       - name: Generate Release Notes
         uses: release-drafter/release-drafter@v5
         with:
@@ -30,8 +25,7 @@ jobs:
 
       - name: Download latest release notes
         run: |
-          RELEASE_NOTES=$(gh release view --json body -q .body || echo "No releases found")
-          echo "$RELEASE_NOTES" > CHANGELOG.md
+          gh release view --json body -q .body > CHANGELOG.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
