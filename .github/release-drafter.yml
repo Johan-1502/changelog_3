@@ -1,0 +1,25 @@
+name-template: "v$NEXT_PATCH_VERSION"
+tag-template: "v$NEXT_PATCH_VERSION"
+
+categories:
+  - title: "🚀 Nuevas Funcionalidades"
+    labels:
+      - "feature"
+  - title: "🐛 Correcciones de Errores"
+    labels:
+      - "bug"
+  - title: "🛠 Mejoras y Mantenimiento"
+    labels:
+      - "chore"
+      - "refactor"
+
+change-template: "- $TITLE (#$NUMBER) por @$AUTHOR"
+version-template: "$MAJOR.$MINOR.$PATCH"
+template: |
+  # Cambios en esta versión ($NEXT_PATCH_VERSION)
+
+  ## 🚀 Nuevas Funcionalidades
+  $CHANGES
+
+  **Commits incluidos en esta versión:**
+  $CONTRIBUTORS
